@@ -1,9 +1,14 @@
-<span id="ps1_01"></span> <span id="cd"></span> <br>
-<span id="ps1_02"></span> <span id="cat"></span> <br>
+<span id="ps1_01"></span> <span id="cat"></span> <br>
 <span id="std_out_01"></span> <br>
-<span id="ps1_03"></span> <span id="tree"></span> <br>
+<span id="ps1_02"></span> <span id="experienceTree"></span> <br>
 <span id="std_out_02"></span> <br>
-<span id="ps1_04"></span>
+<span id="ps1_03"></span> <span id="skillTree"></span> <br>
+<span id="std_out_03"></span> <br>
+<span id="ps1_04"></span> <span id="projectTree"></span> <br>
+<span id="std_out_04"></span> <br>
+<span id="ps1_05"></span> <span id="contactTree"></span> <br>
+<span id="std_out_05"></span> <br>
+<span id="ps1_06"></span>
 
 <script type="text/javascript">
     async function typewriter(text, elementId, waitAfter) {
@@ -53,12 +58,17 @@
         stdoutDelay = parseDelay("{{ .stdoutdelay }}"),
         commandDelay = parseDelay("{{ .commanddelay }}");
     const typeeffetct = async () => {
-        await typewriter("{{ .env }}", "ps1_01", ps1Delay); await typewriter("{{ .cd }}", "cd", commandDelay);
-        await typewriter("{{ .envWithDir }}", "ps1_02", ps1Delay); await typewriter("{{ .cat }}", "cat", commandDelay);
-        await typewriter("{{ .description }}", "std_out_01", stdoutDelay);
-        await typewriter("{{ .envWithDir }}", "ps1_03", ps1Delay); await typewriter("{{ .tree }}", "tree", commandDelay);
-        await typewriter("{{ .leaf }}", "std_out_02", stdoutDelay);
-        await typewriter("{{ .envWithDir }}", "ps1_04", ps1Delay);
+        await typewriter("{{ .envWithDir }}", "ps1_01", ps1Delay); await typewriter("{{ .cat }}", "cat", commandDelay);
+        await typewriter("{{ .introduction }}", "std_out_01", stdoutDelay);
+        await typewriter("{{ .envWithDir }}", "ps1_02", ps1Delay); await typewriter("{{ .experienceTree }}", "experienceTree", commandDelay);
+        await typewriter("{{ .experienceLeaf }}", "std_out_02", stdoutDelay);
+        await typewriter("{{ .envWithDir }}", "ps1_03", ps1Delay); await typewriter("{{ .skillTree }}", "skillTree", commandDelay);
+        await typewriter("{{ .skillLeaf }}", "std_out_03", stdoutDelay);
+        await typewriter("{{ .envWithDir }}", "ps1_04", ps1Delay); await typewriter("{{ .projectTree }}", "projectTree", commandDelay);
+        await typewriter("{{ .projectLeaf }}", "std_out_04", stdoutDelay);
+        await typewriter("{{ .envWithDir }}", "ps1_05", ps1Delay); await typewriter("{{ .contactTree }}", "contactTree", commandDelay);
+        await typewriter("{{ .contactLeaf }}", "std_out_05", stdoutDelay);
+        await typewriter("{{ .envWithDir }}", "ps1_06", ps1Delay);
         return;
     }
 
